@@ -23,14 +23,11 @@
   text-transform: uppercase;
  }
  
- p, a, input, label {
+ p, a, input, label, input::placeholder {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 16px;
+  font-size: 1.2em;
  }
  
- p::placeholder{
-  font-size: 16px;
- }
 
  textarea:focus, input:focus{
   outline: none;
@@ -64,9 +61,6 @@ body{
     border: none;
     padding: 12px;
     border-radius: 50px;
-    ::placeholder{
-      font-size: 15px;
-    }
     :focus{
       outline: none;
     }
@@ -80,7 +74,6 @@ body{
     p{
       color: black;
       margin-left: 12px;
-      font-size: 15px;
     }
   }
   #submit-btn{
