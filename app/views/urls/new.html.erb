@@ -1,0 +1,28 @@
+<div id="titles">
+  <h1>Shorten your url</h1>
+  <p>You can either choose to customize your short link or let us do it!</p>
+</div>
+
+<div id="form">
+  <%= form_for @url, :remote => true do |f| %>
+    <h2>Type the url to shorten :</h2>
+    <%= f.text_field :long_url, placeholder:'http://wwww.auriane-gregoire.com', id:'input-long-url' %>
+    <p class="error"></p>
+    <h2 style="margin-bottom:5px">Customize its short link :</h2>
+    <p style="margin-top:0">This is not mandatory</p>
+    <div id="line-form">
+    <p>wwww.long-to-short-url.herokuapp.com/</p>
+    <%= f.text_field :short_url, placeholder:'au-ge', id:'input-short-url' %>
+    </div>
+      <p class="error"></p>
+    <%= f.submit id:'submit-btn' %>
+  <% end %>
+</div>
+
+<% if @created != nil %>
+  <div id="pop">
+  <i class="fas fa-times"></i>
+    <p>Your URL has been shorten. Its link is :</p>
+    <p>wwww.long-to-short-url.herokuapp.com/<%= @created %></p>
+  </div>
+<% end %>

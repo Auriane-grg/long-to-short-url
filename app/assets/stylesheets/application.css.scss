@@ -1,0 +1,139 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=IBM+Plex+Sans&display=swap');
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ 
+ h1, h2, h3, h4, h5, h6{
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+ }
+ 
+ p, a, input, label {
+  font-family: 'IBM Plex Sans', sans-serif;
+ }
+
+
+ textarea:focus, input:focus{
+  outline: none;
+}
+
+body{
+  text-align: center;
+}
+
+
+#titles{
+  p{
+    margin: 0px;
+  }
+  h1{
+    margin-bottom: 15px;
+  }
+}
+
+#form{
+  margin-top: 50px;
+  border-radius: 25px;
+  border: 1px solid #C3C3E6;
+  padding: 30px;
+  background-color: #C3C3E6;
+  color: white;
+  .error{
+    color: #51355A;
+  }
+  input{
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    ::placeholder{
+      font-size: 15px;
+    }
+    :focus{
+      outline: none;
+    }
+  }
+
+
+  #line-form{
+    display: flex;
+    border-radius: 50px;
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    p{
+      color: black;
+      margin-left: 12px;
+      font-size: 15px;
+    }
+    input{
+      width: 100px;
+    }
+  }
+  #input-long-url{
+    width: 400px;
+  }
+  #submit-btn{
+    border: none;
+    background-color: #51355A;
+    color:white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+  }
+}
+
+
+
+
+@media(max-width: 900px){
+  body{
+    margin-left: 10px;
+    margin-right: 10px;
+    #titles{
+      margin-top: 50px;
+    }
+  }
+}
+
+@media(min-width: 901px){
+  body{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+}
+
+#pop{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #32533D;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  p{
+    margin: 0;
+  }
+  .fa-times{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
