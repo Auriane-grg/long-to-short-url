@@ -11,7 +11,7 @@
     <h2 style="margin-bottom:5px">Customize its short link :</h2>
     <p style="margin-top:0">This is not mandatory</p>
     <div id="line-form">
-    <p>wwww.long-to-short-url.herokuapp.com/</p>
+    <p>wwww.l-to-short-url.herokuapp.com/</p>
     <%= f.text_field :short_url, placeholder:'au-ge', id:'input-short-url' %>
     </div>
       <p class="error"></p>
@@ -23,7 +23,7 @@
   <div id="pop">
     <i class="fas fa-times"></i>
     <p>Your URL has been shorten. Its link is :</p>
-    <p id='pop-short-url'>www.long-to-short-url.herokuapp.com/<%= @created %></p>
+    <p id='pop-short-url'>www.l-to-short-url.herokuapp.com/<%= @created %></p>
     <div style="text-align: center">
         <input type="text" id="copyText" style="opacity:0; width: 0px; height: 0px">
         <button id="copy-btn">COPY MY LINK</button>

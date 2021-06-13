@@ -25,8 +25,12 @@
  
  p, a, input, label {
   font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
  }
-
+ 
+ p::placeholder{
+  font-size: 16px;
+ }
 
  textarea:focus, input:focus{
   outline: none;
@@ -68,24 +72,16 @@ body{
     }
   }
 
-
   #line-form{
     display: flex;
     border-radius: 50px;
     background-color: white;
-    width: 500px;
     margin: auto;
     p{
       color: black;
       margin-left: 12px;
       font-size: 15px;
     }
-    input{
-      width: 100px;
-    }
-  }
-  #input-long-url{
-    width: 400px;
   }
   #submit-btn{
     border: none;
@@ -100,25 +96,6 @@ body{
 }
 
 
-
-
-@media(max-width: 900px){
-  body{
-    margin-left: 10px;
-    margin-right: 10px;
-    #titles{
-      margin-top: 50px;
-    }
-  }
-}
-
-@media(min-width: 901px){
-  body{
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-}
 
 #pop{
   position: fixed;
@@ -146,5 +123,29 @@ body{
     margin: auto;
     font-family: 'Fjalla One', sans-serif;
     margin-top:5px;
+  }
+}
+
+@media(max-width: 3000px) {
+  body{
+    margin-left: 100px;
+    margin-right: 100px;
+    #input-long-url{
+      width: -WEBKIT-FILL-AVAILABLE;
+    }
+  }
+}
+
+
+@media(max-width: 900px) {
+  body{
+    margin-left: 10px;
+    margin-right: 10px;
+    #titles{
+      margin-top: 50px;
+    }
+    #input-long-url{
+      width: 100%;
+    }
   }
 }

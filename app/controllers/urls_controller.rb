@@ -7,7 +7,9 @@ class UrlsController < ApplicationController
 
   def create
     @url = Url.new(url_params)
-    @url.short_url = "#{rand(a..z)}#{@url.id}" if @url.short_url == ""
+    rand = ('a'..'z').to_a.sample
+    index = Url.last.id + 1
+    @url.short_url = "#{rand}#{index}" if @url.short_url == ""
     if @url.save!
       # redirect_to root_path(@url.short_url)
       redirect_to controller: 'urls', action: 'new', created: "#{@url.short_url}"
