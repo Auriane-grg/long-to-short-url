@@ -23,9 +23,9 @@
   <div id="pop">
     <i class="fas fa-times"></i>
     <p>Your URL has been shorten. Its link is :</p>
-    <p id='pop-short-url'>https://l-to-short-url.herokuapp.com/urls/<%= @created %></p>
-    <div style="text-align: center">
-        <input type="text" id="copyText" style="opacity:0; width: 0px; height: 0px">
+    <a href="https://l-to-short-url.herokuapp.com/urls/<%=@created%>" id='pop-short-url' style="color: white">https://l-to-short-url.herokuapp.com/urls/<%=@created%></a>
+    <div style="text-align: center; text-decoration:none;">
+        <input type="text" id="copyText" style="opacity:0; width: 0px; height: 0px; text-decoration:none;">
         <button id="copy-btn">COPY MY LINK</button>
     </div>
   </div>

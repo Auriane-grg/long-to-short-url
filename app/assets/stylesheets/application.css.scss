@@ -27,6 +27,8 @@
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.2em;
  }
+
+
  
 
  textarea:focus, input:focus{
@@ -98,6 +100,7 @@ body{
   color: white;
   padding: 12px;
   border-radius: 25px;
+  width: fit-content;
   p{
     margin: 0;
   }
