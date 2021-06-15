@@ -5,11 +5,12 @@
 
 <div id="form">
   <%= form_for @url, :remote => true do |f| %>
-    <h2>Type the url to shorten :</h2>
+    <h2 style="margin-bottom:5px">Type the url to shorten :</h2>
+        <p style="margin-top:0">Mandatory</p>
     <%= f.text_field :long_url, placeholder:'http://wwww.auriane-gregoire.com', id:'input-long-url' %>
     <p class="error"></p>
     <h2 style="margin-bottom:5px">Customize its short link :</h2>
-    <p style="margin-top:0">This is not mandatory</p>
+    <p style="margin-top:0">Not mandatory. We can generate an url for you.</p>
     <div id="line-form">
     <p>wwww.l-to-short-url.herokuapp.com/</p>
     <%= f.text_field :short_url, placeholder:'au-ge', id:'input-short-url' %>
