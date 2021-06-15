@@ -20,7 +20,7 @@ const errorsNewForm= () => {
   // Dynamic error messages when changing fields
   longURL.addEventListener('change', () => {
     if (longURL.value != "") {
-      if (/^(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/.test(longURL.value) === false) {
+      if (/^(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?$/.test(longURL.value) === false) {
         longURL.nextElementSibling.innerHTML = "<i class='fas fa-exclamation-triangle'></i> Your long URL should match this format : wwww.azerty.com/zerty<i class='fas fa-exclamation-triangle'></i>"
       } else {
         longURL.nextElementSibling.innerHTML = ""
