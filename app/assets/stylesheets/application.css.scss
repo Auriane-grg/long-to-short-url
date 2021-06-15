@@ -126,6 +126,15 @@ input{
   }
 }
 
+input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #E7E7E7 inset;
+  background-color: transparent;
+}
+
 #input-long-url{
   width: -WEBKIT-FILL-AVAILABLE;
 }

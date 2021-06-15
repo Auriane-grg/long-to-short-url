@@ -18,18 +18,12 @@ const errorsNewForm= () => {
 
 
   // Dynamic error messages when changing fields
-  longURL.addEventListener('focus', () => {
-    if (longURL.value === "") {
-      longURL.nextElementSibling.innerText = "This field is mandatory: please fill it."
-    }
-  });
-
   longURL.addEventListener('change', () => {
     if (longURL.value != "") {
       if (/^https?:\/\/(www\.)?[a-zA-Z0-9@:%_\-\+~#=]+\.[a-zA-Z0-9]{1,6}(\/([a-zA-Z0-9()@:%_\+\-.~#?&\/\/=]*))*/.test(longURL.value) === false) {
-        longURL.nextElementSibling.innerText = "Your long URL should match this format : wwww.azerty.com/zerty."
+        longURL.nextElementSibling.innerHTML = "<i class='fas fa-exclamation-triangle'></i> Your long URL should match this format : wwww.azerty.com/zerty<i class='fas fa-exclamation-triangle'></i>"
       } else {
-        longURL.nextElementSibling.innerText = ""
+        longURL.nextElementSibling.innerHTML = ""
       };
     };
   });
@@ -37,9 +31,9 @@ const errorsNewForm= () => {
   shortURL.addEventListener('change', () => {
     if (shortURL.value != "") {
       if (/^[a-zA-Z0-9.\-#=]+[a-z]+[a-zA-Z0-9.\-#=]*$/.test(shortURL.value) === false) {
-        shortURL.parentElement.nextElementSibling.innerText = "Your short URL should match this format : wwww.azerty.com/zerty. Only use letters, digits, -, #, or =."
+        shortURL.parentElement.nextElementSibling.innerHTML = "<i class='fas fa-exclamation-triangle'></i> Your short URL should match this format : wwww.azerty.com/zerty. Only use letters, digits, -, #, or = <i class='fas fa-exclamation-triangle'></i>" 
       } else {
-        shortURL.parentElement.nextElementSibling.innerText = ""
+        shortURL.parentElement.nextElementSibling.innerHTML = ""
       };
     };
   });
